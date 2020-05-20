@@ -108,7 +108,7 @@ func (c *BidirectSession) Run(Connect net.Conn, p parser.Parser) {
 			return nil
 		}
 		log.Warning("Data to transmit is nil or error occurs")
-		return
+		return nil
 	})
 
 	stopConnectionFromClient := make(chan bool) // Канал для остановки логики работ с соединением

@@ -64,7 +64,7 @@ func (s *bidirectMainLogic) Read(handler func([]byte, error) error) {
 			return nil
 		}
 		log.Trace("Received data from client logic fine")
-		handler(s.p.FormMessage(msg))
+		return handler(s.p.FormMessage(msg))
 	})
 }
 
